@@ -1,0 +1,50 @@
+Project Name:
+POLICY-CLAIM-B1G2-UI
+
+==========================================================================================
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+==========================================================================================
+
+Commands:
+//To clone 
+git clone https://github.com/pratyushswarupdas/OnlineInsuranceClaimRegistrationSystem-FrontEnd.git
+
+//After cloning open folder repo in vscode and open terminal in vscode
+//1.Install node module 
+npm install
+
+//2.Install json module
+
+//Run node and json server
+
+ng serve -o
+
+==========================================================================================
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+==========================================================================================
+
+Path Infos:
+
+/models         =>  Entities/Tables
+-User
+-Roles
+-Policy
+-PolicyDetails
+-Account
+-Claim
+-ClaimType
+-Questions
+
+
+/services          =>   Services
+-account
+-claim
+-policy
+-user
+
+/component          => Component(To view their respective webpages)
+-account
+-claim
+-policy
+-user
+
