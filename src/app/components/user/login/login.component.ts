@@ -13,53 +13,56 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;									
   submitted: boolean = false;									
   invalidLogin: boolean = false;									
-           flag=false;       
-  constructor(private formBuilder: FormBuilder, private router: Router,private serv:UserService ) { }									
-  users:User[]; 
+  flag=false;       
+  users:User[];
+  constructor(private formBuilder: FormBuilder, private router: Router,private userService:UserService ) { }									
+   
        
   onSubmit(){									
     this.submitted = true;									
     if(this.loginForm.invalid){									
       return;									
     }		
+    if(this.loginForm.valid)
+    { 
 
-    this.serv.getUsers().subscribe((data)=>{
-      //fetching all users from db
-      this.users=data;
-    },
-    (err)=>{
-      console.log(err);
+      console.log(this.users);
       
-    });
-
-    console.log(this.users);
+      for(let user of this.users){
+        if(user.username === this.loginForm.controls.username.value  &&									
+           user.password === this.loginForm.controls.password.value)
+        {					
+            this.invalidLogin=false;			
+            localStorage.setItem(
+              'username',
+              this.loginForm.controls.username.value
+            );	
+            console.log(user);
+            this.router.navigate(['policy']);            
+        }	
+        else{
+          this.invalidLogin=true;
+        }								
+      }   
+      // if(this.flag==false){
+      //   this.invalidLogin=true;
+      // }else{
+      //   this.invalidLogin=false;
+      // }
     
-    for(var i=0;i<this.users.length;i++){
-      console.log(this.users[i].username,this.users[i].password);
-      if(this.loginForm.controls.username.value ===this.users[i].username &&									
-        this.loginForm.controls.password.value===this.users[i].password){	
-          this.flag=true;								
-          localStorage.setItem("username",this.loginForm.controls.username.value);	
-          console.log(this.users);
-          this.router.navigate(['policy']);		
-         						
-    }									
-    }
-   		
-    if(this.flag==false){
-      this.invalidLogin=true;
-    }else{
-      this.invalidLogin=false;
     }
   }									
                   
   ngOnInit() {									
-                      
-                  
-    this.loginForm = this.formBuilder.group({									
+      this.loginForm = this.formBuilder.group({									
       username: ['', Validators.required],									
       password: ['', Validators.required]									
-    });									
+    });	
+    
+    //fetching all users from db.json
+    this.userService.getUsers().subscribe((data)=>{
+      this.users=data;
+    });					
                   
   }		
 }
