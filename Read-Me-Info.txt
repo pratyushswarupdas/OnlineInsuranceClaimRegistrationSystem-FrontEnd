@@ -24,9 +24,10 @@ git clone https://github.com/pratyushswarupdas/OnlineInsuranceClaimRegistrationS
 npm install
 
 //2.Install json module
+npm install -g json-server
 
-//Run node and json server
-
+//Run node and json server on split terminal
+json-server --watch db.json
 ng serve -o
 
 //To pull, open terminal in vscode
