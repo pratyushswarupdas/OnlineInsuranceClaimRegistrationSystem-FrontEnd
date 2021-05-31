@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   invalidLogin: boolean = false;									
   flag=false;       
   users:User[];
+
   constructor(private formBuilder: FormBuilder, private router: Router,private userService:UserService ) { }									
    
        
@@ -29,16 +30,24 @@ export class LoginComponent implements OnInit {
       console.log(this.users);
       
       for(let user of this.users){
-        if(user.username === this.loginForm.controls.username.value  &&									
+        if(user.id === this.loginForm.controls.username.value  &&									
            user.password === this.loginForm.controls.password.value)
         {					
             this.invalidLogin=false;			
             localStorage.setItem(
               'username',
               this.loginForm.controls.username.value
-            );	
+            );
+            localStorage.setItem(
+              'userID',
+              user.userrole
+            );
+            
             console.log(user);
-            this.router.navigate(['policy']);            
+            
+            console.log("UserRole: "+localStorage.getItem('userID'))
+            this.router.navigate(['createpolicy']); 
+
         }	
         else{
           this.invalidLogin=true;

@@ -10,6 +10,9 @@ import { PolicyComponent } from './components/policy/policy.component';
 import { UserService } from './services/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/user/login/login.component';
+import { CreatepolicyComponent } from './components/policy/createpolicy/createpolicy.component';
+import { PolicyService } from './services/policy.service';
+import { AccountService } from './services/account.service';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,7 @@ import { LoginComponent } from './components/user/login/login.component';
     ClaimComponent,
     PolicyComponent,
     LoginComponent,
+    CreatepolicyComponent,
     
   ],
   imports: [
@@ -28,7 +32,7 @@ import { LoginComponent } from './components/user/login/login.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [UserService],
+  providers: [UserService,PolicyService,AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

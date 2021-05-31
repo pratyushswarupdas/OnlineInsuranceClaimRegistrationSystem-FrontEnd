@@ -29,174 +29,199 @@
       "id": "Elisa",
       "password": "test123",
       "userrole": "insured"
-    }],
-
-  "account":[
-  { 
-    "id":10000001,             
-    "username":"Andy",
-    "insuredname":"Candy"
-  },
-  { 
-    "id":10000002,             
-    "username":"Andy",
-    "insuredname":"Danny"
-  },{ 
-    "id":10000003,             
-    "username":"Bob",
-    "insuredname":"Elisa"
-  },{ 
-    "id":10000004,             
-    "username":"Andy",
-    "insuredname":"Danny"
-  }],
-  "policy":[
-    {
-      "id":1000001,
-    "policyPremium":1000,
-    "accountNumber":10000003
-    },
-    {
-      "id":1000002,
-    "policyPremium":16000,
-    "accountNumber":10000001
-    },{
-      "id":1000003,
-    "policyPremium":8000,
-    "accountNumber":10000001
-    },{
-      "id":1000004,
-    "policyPremium":2000,
-    "accountNumber":10000002
-    },{
-      "id":1000005,
-    "policyPremium":20000,
-    "accountNumber":10000002
-    },{
-      "id":1000006,
-    "policyPremium":12000,
-    "accountNumber":10000004
     }
   ],
-  "claim":[
+  "account": [
     {
-      "id":10005,
-      "claimReason":"Accidental",
-      "accidentlocStreet":"Street1",
-      "accidentCity":"Mumbai",
-      "accidentState":"Maharashtra",
-      "accidentZip":400701,
-      "claimType":"Accident",
-      "policyNumber":1000001,       
-      "claimAmount":5000
+      "id": 10000001,
+      "username": "Andy",
+      "insuredname": "Candy"
     },
     {
-      "id":10006,
-      "claimReason":"crashCrash",
-      "accidentlocStreet":"Street2",
-      "accidentCity":"hyderabad",
-      "accidentState":"Telengana",
-      "accidentZip":600600,
-      "claimType":"Accident",
-      "policyNumber":1000002,       
-      "claimAmount":245000
-    },{
-      "id":10007,
-      "claimReason":"Theft",
-      "accidentlocStreet":"Street3",
-      "accidentCity":"Pune",
-      "accidentState":"Maharashtra",
-      "accidentZip":400030,
-      "claimType":"Theft",
-      "policyNumber":1000003,       
-      "claimAmount":118000
-    },{
-      "id":10008,
-      "claimReason":"Accidental",
-      "accidentlocStreet":"street5",
-      "accidentCity":"Lucknow",
-      "accidentState":"UP",
-      "accidentZip":898000,
-      "claimType":"Accident",
-      "policyNumber":1000004,       
-      "claimAmount":13200
-    },{
-      "id":10009,
-      "claimReason":"CarCrash",
-      "accidentlocStreet":"Jaipur",
-      "accidentCity":"Jaipur",
-      "accidentState":"Rajasthan",
-      "accidentZip":200111,
-      "claimType":"Accident",
-      "policyNumber":1000005,       
-      "claimAmount":41000
-    },{
-      "id":10010,
-      "claimReason":"ShortCircuit",
-      "accidentlocStreet":"Street8",
-      "accidentCity":"Munnar",
-      "accidentState":"Kerela",
-      "accidentZip":400701,
-      "claimType":"Accident",
-      "policyNumber":1000006,       
-      "claimAmount":26000
+      "id": 10000002,
+      "username": "Andy",
+      "insuredname": "Danny"
+    },
+    {
+      "id": 10000003,
+      "username": "Bob",
+      "insuredname": "Elisa"
+    },
+    {
+      "id": 10000004,
+      "username": "Andy",
+      "insuredname": "Danny"
     }
   ],
-
-  "questions":[
+  "policy": [
     {
-      "id":1,
-      "ques_1":"Is your vehicle's engine in working condition?",
-      "ques_2":"Is your vehicle damaged from the front?",
-      "ques_3":"Is your vehicle damaged from back?",
-      "ques_4":"Is your vehicle damaged from sideways?",
-      "ques_5":"Does your vehicle's show signs of Fire damage?"
+      "id": 1000001,
+      "policyPremium": 1000,
+      "accountNumber": 10000003
     },
     {
-      "id":2,
-      "ques_1":"Is your vehicle's engine in working condition?",
-      "ques_2":"Is your vehicle damaged from the front?",
-      "ques_3":"Is your vehicle damaged from back?",
-      "ques_4":"Is your vehicle damaged from sideways?",
-      "ques_5":"Does your vehicle's show signs of Fire damage?"
-    },{
-      "id":3,
-      "ques_1":"Is your vehicle's engine in working condition?",
-      "ques_2":"Is your vehicle damaged from the front?",
-      "ques_3":"Is your vehicle damaged from back?",
-      "ques_4":"Is your vehicle damaged from sideways?",
-      "ques_5":"Does your vehicle's show signs of Fire damage?"
+      "id": 1000002,
+      "policyPremium": 16000,
+      "accountNumber": 10000001
+    },
+    {
+      "id": 1000003,
+      "policyPremium": 8000,
+      "accountNumber": 10000001
+    },
+    {
+      "id": 1000004,
+      "policyPremium": 2000,
+      "accountNumber": 10000002
+    },
+    {
+      "id": 1000005,
+      "policyPremium": 20000,
+      "accountNumber": 10000002
+    },
+    {
+      "id": 1000006,
+      "policyPremium": 12000,
+      "accountNumber": 10000004
+    },
+    {
+      "id": 1000007,
+      "policyPremium": "564784",
+      "accountNumber": "10000004"
+    },
+    {
+      "id": 1000008,
+      "policyPremium": "253",
+      "accountNumber": "10000004"
+    },
+    {
+      "id": 1000009,
+      "policyPremium": "1234143",
+      "accountNumber": "10000004"
     }
   ],
-  "policydetails":[
+  "claim": [
     {
-      "policyNumber":1000001,
-      "questionId":1
+      "id": 10005,
+      "claimReason": "Accidental",
+      "accidentlocStreet": "Street1",
+      "accidentCity": "Mumbai",
+      "accidentState": "Maharashtra",
+      "accidentZip": 400701,
+      "claimType": "Accident",
+      "policyNumber": 1000001,
+      "claimAmount": 5000
     },
     {
-      "policyNumber":1000002,
-      "questionId":3
+      "id": 10006,
+      "claimReason": "crashCrash",
+      "accidentlocStreet": "Street2",
+      "accidentCity": "hyderabad",
+      "accidentState": "Telengana",
+      "accidentZip": 600600,
+      "claimType": "Accident",
+      "policyNumber": 1000002,
+      "claimAmount": 245000
     },
     {
-      "policyNumber":1000002,
-      "questionId":2
+      "id": 10007,
+      "claimReason": "Theft",
+      "accidentlocStreet": "Street3",
+      "accidentCity": "Pune",
+      "accidentState": "Maharashtra",
+      "accidentZip": 400030,
+      "claimType": "Theft",
+      "policyNumber": 1000003,
+      "claimAmount": 118000
     },
     {
-      "policyNumber":1000003,
-      "questionId":2
+      "id": 10008,
+      "claimReason": "Accidental",
+      "accidentlocStreet": "street5",
+      "accidentCity": "Lucknow",
+      "accidentState": "UP",
+      "accidentZip": 898000,
+      "claimType": "Accident",
+      "policyNumber": 1000004,
+      "claimAmount": 13200
     },
     {
-      "policyNumber":1000004,
-      "questionId":1
+      "id": 10009,
+      "claimReason": "CarCrash",
+      "accidentlocStreet": "Jaipur",
+      "accidentCity": "Jaipur",
+      "accidentState": "Rajasthan",
+      "accidentZip": 200111,
+      "claimType": "Accident",
+      "policyNumber": 1000005,
+      "claimAmount": 41000
     },
     {
-      "policyNumber":1000005,
-      "questionId":3
+      "id": 10010,
+      "claimReason": "ShortCircuit",
+      "accidentlocStreet": "Street8",
+      "accidentCity": "Munnar",
+      "accidentState": "Kerela",
+      "accidentZip": 400701,
+      "claimType": "Accident",
+      "policyNumber": 1000006,
+      "claimAmount": 26000
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "ques_1": "Is your vehicle's engine in working condition?",
+      "ques_2": "Is your vehicle damaged from the front?",
+      "ques_3": "Is your vehicle damaged from back?",
+      "ques_4": "Is your vehicle damaged from sideways?",
+      "ques_5": "Does your vehicle's show signs of Fire damage?"
     },
     {
-      "policyNumber":1000006,
-      "questionId":2
-    }]
-
+      "id": 2,
+      "ques_1": "Is your vehicle's engine in working condition?",
+      "ques_2": "Is your vehicle damaged from the front?",
+      "ques_3": "Is your vehicle damaged from back?",
+      "ques_4": "Is your vehicle damaged from sideways?",
+      "ques_5": "Does your vehicle's show signs of Fire damage?"
+    },
+    {
+      "id": 3,
+      "ques_1": "Is your vehicle's engine in working condition?",
+      "ques_2": "Is your vehicle damaged from the front?",
+      "ques_3": "Is your vehicle damaged from back?",
+      "ques_4": "Is your vehicle damaged from sideways?",
+      "ques_5": "Does your vehicle's show signs of Fire damage?"
+    }
+  ],
+  "policydetails": [
+    {
+      "policyNumber": 1000001,
+      "questionId": 1
+    },
+    {
+      "policyNumber": 1000002,
+      "questionId": 3
+    },
+    {
+      "policyNumber": 1000002,
+      "questionId": 2
+    },
+    {
+      "policyNumber": 1000003,
+      "questionId": 2
+    },
+    {
+      "policyNumber": 1000004,
+      "questionId": 1
+    },
+    {
+      "policyNumber": 1000005,
+      "questionId": 3
+    },
+    {
+      "policyNumber": 1000006,
+      "questionId": 2
+    }
+  ]
 }
-
