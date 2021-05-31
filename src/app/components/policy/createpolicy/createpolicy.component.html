@@ -5,15 +5,7 @@
   <h2>Add User</h2>														
   <br/>														
   <form [formGroup]="addPolicyForm" (ngSubmit)="onSubmit()">														
-<!--											
-    <div class="form-group">														
-      <label for="lastName">Last Name:</label>														
-      <input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">														
-      <div *ngIf="submitted && addForm.controls.lastName.errors" class="error">														
-          <div class="text-danger" *ngIf="addForm.controls.lastName.errors.required">LastName is required</div>														
-        </div>														
-    </div>														
--->													
+												
     <div class="form-group">														
       <label for="policyPremium">Policy Premium:</label>														
       <input type="policyPremium" formControlName="policyPremium" placeholder="policyPremium" name="policyPremium" class="form-control" id="policyPremium">														
@@ -27,9 +19,20 @@
       <input type="accountNumber" formControlName="accountNumber" placeholder="accountNumber" name="accountNumber" class="form-control" id="accountNumber">														
       <div *ngIf="submitted &&addPolicyForm.controls.accountNumber.errors" class="error">														
           <div class="text-danger" *ngIf="addPolicyForm.controls.accountNumber.errors.required">Account Number is required</div>														
-        </div>														
+       </div>														
     </div>
-    														
+
+<!-- <div class="form-group">
+  <label for="carType">Choose a car type:</label>
+  <select id="cars" name="cars">
+    <option value="SUV">SUV</option>
+    <option value="LUV">LUV</option>
+    <option value="Two Wheeler">Two Wheeler</option>
+  </select>
+  <input type="hidden" formControlName="carType" placeholder="carType" name="carType" class="form-control" id="carType">
+</div> -->
+
+
     <button class="btn btn-success">Submit</button>&nbsp; &nbsp;														
     <button class="btn btn-danger" type="reset">Cancel</button>														
 													
@@ -39,5 +42,9 @@
       </div>														
 														
     <br/><br/>														
-  </form>														
+
+
+</form>														
+
+
 </div>		

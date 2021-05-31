@@ -13,7 +13,9 @@ export class CreatepolicyComponent implements OnInit {
 
   addPolicyForm:FormGroup;
   submitted:boolean=false;
-  account:Account[];
+  account1:Account[];
+  account2:Account[];
+
   currentuser: string | null;
   invalidLogin: boolean = false;									
   currentUserRole: string | null;
@@ -28,8 +30,15 @@ export class CreatepolicyComponent implements OnInit {
     });
     this.currentuser=localStorage.getItem('username');
     this.currentUserRole=localStorage.getItem('userID');
-    console.log(this.currentUserRole)
-    	
+    console.log(this.currentUserRole);
+    //fetching all Accounts from db.json
+    this.accountService.getAccounts().subscribe((data)=>{
+      this.account1=data;
+    });
+    //fetching Selective Accounts from db.json
+    this.accountService.getAccountByUserName(this.currentuser).subscribe((data)=>{
+      this.account2=data;
+    });
   }
 
   onSubmit(){
@@ -47,11 +56,8 @@ export class CreatepolicyComponent implements OnInit {
     {
       if(this.currentUserRole=="admin")
       {
-        //fetching all Accounts from db.json
-        this.accountService.getAccount().subscribe((data)=>{
-          this.account=data;
-        });
-        for(let accounts of this.account)
+        
+        for(let accounts of this.account1)
       {
         console.log(accounts.id);
         console.log(this.addPolicyForm.controls.accountNumber.value);
@@ -60,7 +66,7 @@ export class CreatepolicyComponent implements OnInit {
         {
           console.log("posting policy");						
           this.policyService.createPolicy(this.addPolicyForm.value)								
-          .subscribe( data => {								
+          .subscribe( (data) => {								
             this.router.navigate(['policy']);		
             console.log("added");
             
@@ -77,11 +83,8 @@ export class CreatepolicyComponent implements OnInit {
       }
       }
       else if(this.currentUserRole=="agent"){
-        //fetching all Accounts from db.json
-        this.accountService.getAccountByUserName(this.currentuser).subscribe((data)=>{
-          this.account=data;
-        });
-        for(let accounts of this.account)
+        
+        for(let accounts of this.account2)
       {
         console.log(accounts.id);
         console.log(this.addPolicyForm.controls.accountNumber.value);

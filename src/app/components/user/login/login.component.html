@@ -1,31 +1,25 @@
-<p>login works!</p>
-<br/><br/>											
-  <div class="col-md-6 col-md-offset-2">											
-    <h3>Login</h3>											
-    <br/>											
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">											
-      <div class="form-group">											
-        <label for="UserName">UserName :</label>											
-        <input type="username" class="form-control" formControlName="username" id="username">											
-        <div *ngIf="submitted && loginForm.controls.username.errors" class="error">											
-          <div class="text-danger" *ngIf="loginForm.controls.username.errors.required">Username Is Required</div>											
-        </div>											
-        											
-      </div>											
-      <div class="form-group">											
-        <label for="pwd">Password :</label>											
-        <input type="password" class="form-control" formControlName="password" id="pwd">											
-        <div *ngIf="submitted && loginForm.controls.password.errors" class="error">											
-          <div class="text-danger" *ngIf="loginForm.controls.password.errors.required">Password Is Required</div>											
-        </div>											
-      </div>					
-   
-      <button class="btn btn-success">Login</button> &nbsp; &nbsp;											
-      <button class="btn btn-danger" type="reset">Cancel</button>											
-      <br/><br/>											
-      <div *ngIf="invalidLogin" class="error">											
-        <div class="text-danger">Invalid Credentials.</div>											
-      </div>											
-    </form>											
-  </div>
+<!-- <head>
+  <meta http-equiv="refresh" content="0">
+</head> -->
 
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="login-box form-group">
+      <h1>Login</h1>
+      <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="User Name" class="form-control" formControlName="username" id="username">                 
+          </div>
+          <div *ngIf="submitted && loginForm.controls.username.errors" class="error">                     
+            <div class="text-danger" *ngIf="loginForm.controls.username.errors.required">Username Is Required</div>  
+      </div>
+  
+      <div class="textbox form-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" class="form-control" formControlName="password" id="pwd">
+                             
+          </div>
+          <div *ngIf="submitted && loginForm.controls.password.errors" class="error">                     
+            <div class="text-danger" *ngIf="loginForm.controls.password.errors.required">Password Is Required</div>
+      </div>
+      <button class="btn btn-success">Login</button> &nbsp; &nbsp;
+    </div>

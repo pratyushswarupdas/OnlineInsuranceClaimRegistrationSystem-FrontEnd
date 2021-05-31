@@ -13,7 +13,7 @@ export class AccountService {
   getAccountByUserName(username:string|null): Observable<Account[]>{
     return this.http.get<Account[]>(this.baseUrl+'?username='+username);								
   }	
-  getAccount(): Observable<Account[]>{
+  getAccounts(): Observable<Account[]>{
     return this.http.get<Account[]>(this.baseUrl);								
     }
 }

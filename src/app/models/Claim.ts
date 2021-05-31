@@ -1,4 +1,4 @@
-export class claim{
+export class Claim{
     id:number               //Claim Number
     claimReason:string;
     accidentlocStreet:string;

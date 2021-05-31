@@ -25,14 +25,31 @@
         </div>
         
         <!--Logo-->
-        <!-- <div class="header_logo">
-                <img src="https://see.fontimg.com/api/renderfont4/8Ma60/eyJyIjoiZnMiLCJoIjo2NSwidyI6MTAwMCwiZnMiOjY1LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/Q2xhaW0gUG9saWN5IEFwcA/aquire-bold.png">
-                <h1>Claim Policy Insurance</h1> 
-        </div> -->
+        <div class="header_logo">
+            <img src="https://www.capgemini.com/in-en/wp-content/themes/capgemini-komposite/assets/images/logo.svg" alt="Capgemini India"><h2>Claim Policy Insurance</h2> 
+        </div>
 
         <!--UserName-->
-        <div class="header_name"> 
-                User Name 
+        <div class="header_name">
+            <div id="UserName"></div>
+
+            <script>
+            // Check browser support
+            if (typeof(Storage) !== "undefined") {
+                if(localStorage.getItem("username")!==null)
+                {
+                    // Retrieve
+                    document.getElementById("UserName").innerHTML = localStorage.getItem("username");
+                }
+                else{
+                    document.getElementById("UserName").innerHTML = "";
+                }
+            
+            } 
+            else {
+                console.log("UserName Cant Be Displayed On Header");
+            }
+            </script>
         </div>
 
     </header>
@@ -49,22 +66,27 @@
                     <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Files</span> </a> 
                     <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a> 
                 </div>
-            </div> <a href="#" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+            </div> 
+            <a href="login" class="nav_link"> 
+                <i class='bx bx-log-out nav_icon'></i> 
+                <span class="nav_name">SignOut</span> 
+            </a>
         </nav>
     </div>
     <!--Container Main start-->
     <div class="height-100 bg-light">
-        <h4>Main Components</h4>
+        <!-- <h4>Main Components</h4> -->
 
         <app-root></app-root>
 
     </div>
     <!--Container Main end-->
 
-        <app-root></app-root>
+        
 
     <!--Footer-->
-    <footer></footer>
+    <footer><span class="text-danger"><strong>This site is copyright &copy; to Capgemini. 							
+        All rights are reserved here ..!</strong></span></footer>	
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {
 

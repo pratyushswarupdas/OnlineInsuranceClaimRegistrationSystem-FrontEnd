@@ -67,7 +67,7 @@ export class LoginComponent implements OnInit {
       username: ['', Validators.required],									
       password: ['', Validators.required]									
     });	
-    
+    localStorage.removeItem('username')
     //fetching all users from db.json
     this.userService.getUsers().subscribe((data)=>{
       this.users=data;
