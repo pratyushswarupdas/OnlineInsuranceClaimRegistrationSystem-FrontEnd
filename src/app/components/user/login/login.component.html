@@ -8,7 +8,7 @@
         <label for="UserName">UserName :</label>											
         <input type="username" class="form-control" formControlName="username" id="username">											
         <div *ngIf="submitted && loginForm.controls.username.errors" class="error">											
-          <div class="text-danger" *ngIf="loginForm.controls.username.errors.required">username is required</div>											
+          <div class="text-danger" *ngIf="loginForm.controls.username.errors.required">Username Is Required</div>											
         </div>											
         											
       </div>											
@@ -16,7 +16,7 @@
         <label for="pwd">Password :</label>											
         <input type="password" class="form-control" formControlName="password" id="pwd">											
         <div *ngIf="submitted && loginForm.controls.password.errors" class="error">											
-          <div class="text-danger" *ngIf="loginForm.controls.password.errors.required">Password is required</div>											
+          <div class="text-danger" *ngIf="loginForm.controls.password.errors.required">Password Is Required</div>											
         </div>											
       </div>					
    
@@ -24,7 +24,7 @@
       <button class="btn btn-danger" type="reset">Cancel</button>											
       <br/><br/>											
       <div *ngIf="invalidLogin" class="error">											
-        <div class="text-danger">Invalid credentials.</div>											
+        <div class="text-danger">Invalid Credentials.</div>											
       </div>											
     </form>											
   </div>
