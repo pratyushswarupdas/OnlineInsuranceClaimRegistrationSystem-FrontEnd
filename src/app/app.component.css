@@ -1,6 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+:root {
+    --header-height: 3rem;
+    --nav-width: 68px;
+    --first-color: #0070AD;
+    --first-color-light: #a1dbec;
+    --white-color: #F7F6FB;
+    --body-font: 'Nunito', sans-serif;
+    --normal-font-size: 1rem;
+    --z-fixed: 100
+}
+*,
+::before,
+::after {
+    box-sizing: border-box
+}
+
+body {
+    position: relative;
+    margin: var(--header-height) 0 0 0;
+    padding: 0 1rem;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    transition: .5s;
+    
+    
+    
+}
+
 .header {
     width: 100%;
     height: var(--header-height);
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -12,15 +43,30 @@
     transition: .5s
 }
 
+.header_toggle {
+    color: var(--first-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex
+    
+}
+
+.header_name{
+    color:#4caf50;
+    font-weight: bold
+}
+
 .header_logo{
     width: auto;
     height: auto;
     display: flex;
     justify-content: center;
     
-    color:#0070AD;
+    /* color:#4723D9;
     font-weight: bold;
-    font-family: Aquire , Helvetica, sans-serif;
+    font-family: Aquire , Helvetica, sans-serif; */
+    
+
 }
 
 .header_name{
@@ -49,13 +95,11 @@ footer {
   
  }
  @media screen and (min-width: 768px) {
-    body {
-        margin: calc(var(--header-height) + 1rem) 0 0 0;
-        padding-left: calc(var(--nav-width) + 2rem)
-    }
+
 
     .header {
         height: calc(var(--header-height) + 1rem);
         padding: 0 2rem 0 calc(var(--nav-width) + 2rem)
     }
+
 }

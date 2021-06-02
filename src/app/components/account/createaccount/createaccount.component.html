@@ -1,40 +1,45 @@
-<div class="col-md-6 col-md-offset-2">											
-    <h3>Account Creation</h3>											
-    <br/>		
-    									
-    <form [formGroup]="accntcreate" (ngSubmit)="onSubmit()">
-      <div class="form-group">	
 
-        <label for="id">AccountNumber :</label>											
-        <input type="number" class="form-control"  formControlName="id" id="id">											
-        <div *ngIf="submitted && accntcreate.controls.id.errors" class="error">											
-          <div class="text-danger" *ngIf="accntcreate.controls.id.errors.required">Account Number is required</div>											
-        <div *ngIf="accntcreate.controls.id.errors.pattern">Account Number should be 8 digit </div>											
+<div class="registration-form">											
+
+  <h3 style="text-align: center;color:whitesmoke">Account Creation</h3>											
+  <br/>		
+                    
+  <form [formGroup]="accntcreate" (ngSubmit)="onSubmit()">
+    <div class="form-group">	
+      <div class="form-icon">
+        <span><i class="icon icon-user"></i></span>
     </div>
+      <label for="id">Account Number :</label>											
+      <input type="number" class="form-control item" placeholder="Enter your Account number"  formControlName="id" id="id">											
+      <div *ngIf="submitted && accntcreate.controls.id.errors" class="error">											
+        <div class="text-danger" *ngIf="accntcreate.controls.id.errors.required">Account Number is required</div>											
+      <div *ngIf="accntcreate.controls.id.errors.pattern">Account Number should be 8 digit </div>											
   </div>
-      
-      <div class="form-group">											
-        <label for="username">UserName :</label>											
-        <input type="username" class="form-control" formControlName="username" id="username">											
-        <div *ngIf="submitted && accntcreate.controls.username.errors" class="error">											
-          <div class="text-danger" *ngIf="accntcreate.controls.username.errors.required">username is required</div>											
-        </div>											
-    </div>	
-
-   <div class="form-group">											
-        <label for="insuredname">InsuredName :</label>											
-        <input type="username" class="form-control" formControlName="insuredname" id="InUserName">											
-        <div *ngIf="submitted && accntcreate.controls.insuredname.errors" class="error">											
-          <div class="text-danger" *ngIf="accntcreate.controls.insuredname.errors.required">insuredname is required</div>											
-        </div>	</div>										
-        	
-      <button class="btn btn-success">Login</button> &nbsp; &nbsp;											
-      <button class="btn btn-danger" type="reset">Cancel</button>											
-      <br/><br/>
-     										
-      <div *ngIf="invalidLogin" class="error">											
-        <div class="text-danger">Invalid credentials.</div>											
+</div>
+    
+    <div class="form-group">											
+      <label for="username">User Name :</label>											
+      <input type="username" class="form-control item"placeholder="Enter User name" formControlName="username" id="username">											
+      <div *ngIf="submitted && accntcreate.controls.username.errors" class="error">											
+        <div class="text-danger" *ngIf="accntcreate.controls.username.errors.required">username is required</div>											
       </div>											
-    </form>	
+  </div>	
 
+ <div class="form-group">											
+      <label for="insuredname">Insured Name :</label>											
+      <input type="username" class="form-control item" placeholder="Enter Insured name" formControlName="insuredname" id="InUserName">											
+      <div *ngIf="submitted && accntcreate.controls.insuredname.errors" class="error">											
+        <div class="text-danger" *ngIf="accntcreate.controls.insuredname.errors.required">insuredname is required</div>											
       </div>	
+    </div>										
+    <div class="form-group">
+    <button class="btn btn-block create-account">create account</button> &nbsp;											
+    <button class="btn btn-block cancel-account" type="reset">Cancel</button>	   </div>										
+    <br/><br/>
+                       
+    <div *ngIf="invalidLogin" class="error">											
+      <div class="text-danger">Invalid credentials.</div>	
+    </div>											
+  </form>	
+
+    </div>	

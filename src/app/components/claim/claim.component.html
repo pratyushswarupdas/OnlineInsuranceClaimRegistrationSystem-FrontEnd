@@ -1,1 +1,118 @@
-<p>claim works!</p>
+<body class="claim-creation-form">
+	<div class="container" style="margin-top: 90px">
+		<div class="row">
+			<div class="col-lg-4 col-lg-5 col-md-5 offset-sm-3 center">
+				<div class="card">
+					<h3 class="card-header alert alert-success" style="color: maroon;">
+						
+					CREATE CLAIM	
+					</h3>
+					<div class="card-body">
+                        
+						<form [formGroup]="claimForm" (ngSubmit)="onSubmit()">
+							<div class="form-group">
+                                <label>Claim Reason : </label>
+								<input formControlName="claimReason" type="text" class="form-control item" id="claimReason"
+									placeholder="Claim Reason" name="claimReason"
+									required="required"> <span id="claimReason"
+									style="color: red;"></span>
+							</div><br>
+							
+                            <div class="form-group">
+                                <label>Accident Street Location : </label>
+								<input formControlName="accLocStreet" type="text" class="form-control item" id="accLocStreet"
+									placeholder="Accident Location Street" name="accLocStreet"
+									required="required"> <span id="accLocStreet"
+									style="color: red;"></span>
+							</div><br>
+                            <div class="form-group">
+                                <label>Accident City : </label>
+								<input formControlName="accCity" type="text" class="form-control item" id="accCity"
+									placeholder="Accident City" name="accCity"
+									required="required"> <span id="accCity"
+									style="color: red;"></span>
+							</div><br>
+                            <div class="form-group">
+                                <label>Accident State : </label>
+								<input formControlName="accState" type="text" class="form-control item" id="accState"
+									placeholder="Accident State" name="accState"
+									required="required"> <span id="accState"
+									style="color: red;"></span>
+							</div><br>
+                            <div class="form-group">
+                                <label>Accident Zip : </label>
+								<input formControlName="accZip" type="text" class="form-control item" id="accZip"
+									placeholder="Accident Zip" name="accZip"
+									required="required" type="number"> <span id="accZip"
+									style="color: red;"></span>
+							</div><br>
+                            <div class="form-group">
+								<!-- Select Claim Types -->
+                                <label for="claimTypeId">Claim Type : </label>
+								<select class="form-control item"  id="claimTypeId" formControlName="claimTypeId" 
+								placeholder="Claim Type" required >
+                                <option value="" disabled selected>Select your option</option>
+									<option value=1>Accidental</option>
+									<option value=2>Theft</option>
+									<option value=3>Natural Calamity</option>
+								</select>
+								
+							</div><br>
+                            <div class="form-group">
+                                <label>Policy Number : </label>
+								<input formControlName="policyNumber" type="text" class="form-control item" id="policyNumber"
+									placeholder="Policy Number" name="policyNumber"
+									required="required" type="number"> <span id="policyNumber"
+									style="color: red;"></span>
+							</div><br>
+                            
+                                <label> Is your vehicle's engine in working condition? </label><br>
+                                
+                                    <input type="radio" formControlName="answer1" name="answer1" value="1" >YES
+                                <input type="radio" formControlName="answer1" name="answer1" value="2" >NO
+                                <br>
+                             
+       
+        <br><label> Is your vehicle damaged from the front? </label><br>
+              
+                  <input type="radio" formControlName="answer2" name="answer2" value="1">YES 
+                    <input type="radio" formControlName="answer2" name="answer2" value="2">NO
+              
+                <br>
+              <br>
+              <label> Is your vehicle damaged from back? </label><br>
+              
+              <input type="radio" formControlName="answer3" name="answer3" value="1">YES
+              <input type="radio" formControlName="answer3" name="answer3" value="2">NO
+                <br>
+              <br>
+              <label>Is your vehicle damaged from sideways? </label><br>
+              
+              <input type="radio" formControlName="answer4" name="answer4" value="1">YES
+              <input type="radio" formControlName="answer4" name="answer4" value="2">NO
+                <br>
+              <br>
+              <label> Does your vehicle's show signs of Fire damage? </label><br>
+              
+              <input type="radio" formControlName="answer5" name="answer5" value="1">YES
+              <input type="radio" formControlName="answer5" name="answer5" value="2">NO
+        
+                <br>
+              <br>
+<div class="container">
+			<div class="center" >
+							<!-- <input type="submit" value="Submit" class="btn btn-success"> -->
+								</div>
+							  </div><br>
+							<input type="submit" value="Submit" class="btn btn-success">
+								
+						</form>
+						<h4 style="color: green;"></h4>
+						<h4 style="color: red;"></h4>
+					</div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

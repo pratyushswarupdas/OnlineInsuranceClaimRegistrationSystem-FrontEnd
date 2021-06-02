@@ -1,0 +1,76 @@
+.registration-form
+{	padding:30px;
+    background: linear-gradient(to right, #b92b27, #1565c0);
+  margin:auto;
+   
+  
+}
+
+.registration-form form
+{
+    background-color: rgb(225, 235, 231);
+    max-width: 600px;
+    margin: auto;
+    padding: 10px 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    box-shadow: 0px 10px 10px rgba(90, 64, 64, 0.075);
+}
+
+.registration-form .form-icon
+{
+	text-align: center;
+    background-color: #9058ff;
+    border-radius: 50%;
+    font-size: 40px;
+    color: white;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 50px;
+    line-height: 100px;
+}
+
+.registration-form .item{
+	border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+}
+
+.registration-form .create-account{
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #5791ff;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    
+}
+.registration-form .create-account:hover
+{
+    font-size: x-large;
+    opacity: 0.8;
+}
+.registration-form .cancel-account{
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: red;
+    border: none;
+    color: white;
+    margin-top: 5px;
+}
+.registration-form .cancel-account:hover
+{
+
+    font-size: x-large;
+    opacity: 0.8;
+}
+label{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

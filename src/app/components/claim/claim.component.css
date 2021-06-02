@@ -1,0 +1,39 @@
+.claim-creation-form
+{	padding:80px;
+    background: linear-gradient(to right, #b92b27, #1565c0);
+  
+}
+
+.card{
+    width: 600px;
+    margin:auto;
+    
+}
+
+.claim-creation-form form
+{
+    background-color: rgb(235, 225, 228);
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 15px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0px 10px 10px rgba(90, 64, 64, 0.075);
+}
+
+
+
+.claim-creation-form .item{
+	border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+}
+
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    /* 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+
