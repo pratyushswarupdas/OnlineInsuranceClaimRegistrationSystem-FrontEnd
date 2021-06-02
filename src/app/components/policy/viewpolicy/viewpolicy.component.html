@@ -10,7 +10,7 @@
       <th>Policy Number</th>													
       <th>Policy Premium </th>													
       <th>Account Number</th>			
-      <th>Claim Creation</th>																							
+      <!-- <th>Claim Creation</th>																							 -->
     </tr>													
     </thead>													
     <tbody>		
@@ -20,9 +20,9 @@
       <td>{{p.id}}</td>													
       <td>{{p.policyPremium  }}</td>													
       <td>{{p.accountNumber }}</td>			
-      <td><button onclick="myFunction(p.id)" class="btn btn-info" id="claim-click">Create Claim</button>
+      <!-- <td><button onclick="myFunction(p.id)" class="btn btn-info" id="claim-click">Create Claim</button></td>	 -->
      
-      </td>			
+      		
       						
         </tr>													
     <tr *ngIf="!policy || policy.length==0">													
