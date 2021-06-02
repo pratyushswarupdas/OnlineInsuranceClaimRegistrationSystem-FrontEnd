@@ -29,6 +29,11 @@
       "id": "Elisa",
       "password": "test123",
       "userrole": "insured"
+    },
+    {
+      "id": "Bhambure",
+      "password": "test123",
+      "userrole": "admin"
     }
   ],
   "account": [

@@ -1,0 +1,77 @@
+
+<body id="body-pd">
+    <!--Header-->
+    <header class="header" id="header">
+        <!--Menu Button-->
+        <div class="header_toggle"> 
+                <i class='bx bx-menu' id="header-toggle"></i> 
+        </div>
+        
+        <!--Logo-->
+        <div class="header_logo">
+            <img src="https://www.capgemini.com/in-en/wp-content/themes/capgemini-komposite/assets/images/logo.svg" alt="Capgemini India"><h2>Claim Policy Insurance</h2> 
+        </div>
+
+        <!--UserName-->
+        <div class="header_name">
+            <div id="UserName"></div>
+
+            <script>
+            // Check browser support
+            if (typeof(Storage) !== "undefined") {
+                if(localStorage.getItem("username")!==null)
+                {
+                    // Retrieve
+                    document.getElementById("UserName").innerHTML = localStorage.getItem("username");
+                }
+                else{
+                    document.getElementById("UserName").innerHTML = "";
+                }
+            
+            } 
+            else {
+                console.log("UserName Cant Be Displayed On Header");
+            }
+            </script>
+        </div>
+
+    </header>
+
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div> <a href="" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">Menu</span> </a>
+                <div class="nav_list"> 
+                    <br>
+                    <a href="/usercreation" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">User Creation</span> </a> 
+                    <a routerLink="/createaccount" class="nav_link"> <i class='bx bxs-user-account'></i><span class="nav_name">Create Account</span> </a> 
+                    <a routerLink="/createpolicy" class="nav_link"> <i class='bx bx-add-to-queue' ></i> <span class="nav_name">Create New Policy</span> </a> 
+                    <a routerLink="/viewpolicy" class="nav_link"> <i class='bx bx-library'></i> <span class="nav_name">View Policy</span> </a> 
+                    <a routerLink="/createclaim" class="nav_link"> <i class='bx bx-list-plus'></i> <span class="nav_name">Claim Creation</span> </a> 
+                    <a routerLink="/viewclaim" class="nav_link"> <i class='bx bxs-report'></i> <span class="nav_name">View Claim</span> </a> 
+
+                </div>
+            </div> 
+            <a href="login" class="nav_link"> 
+                <i class='bx bx-log-out nav_icon'></i> 
+                <span class="nav_name">SignOut</span> 
+            </a>
+        </nav>
+    </div>
+    <!--Container Main start-->
+    <div class="height-100 bg-light">
+        <!-- <h4>Main Components</h4> -->
+
+        
+    <router-outlet></router-outlet>	
+
+    </div>
+    <!--Container Main end-->
+
+        
+
+    <!--Footer-->
+    <footer><span class="text-danger"><strong>This site is copyright &copy; to Capgemini.                           
+        All rights are reserved here ..!</strong></span></footer>   
+        
+    
+</body>

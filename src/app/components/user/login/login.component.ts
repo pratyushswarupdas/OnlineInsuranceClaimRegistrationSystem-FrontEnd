@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   invalidLogin: boolean = false;									
   flag=false;       
   users:User[];
+  currentUserRole: string | null;
 
   constructor(private formBuilder: FormBuilder, private router: Router,private userService:UserService ) { }									
    
@@ -45,8 +46,25 @@ export class LoginComponent implements OnInit {
             
             console.log(user);
             
-            console.log("UserRole: "+localStorage.getItem('userID'))
-            this.router.navigate(['createpolicy']); 
+            console.log("UserRole: "+localStorage.getItem('userID'));
+            this.currentUserRole=localStorage.getItem('userID');
+            if(this.currentUserRole=="admin")
+            {
+              this.router.navigate(['admin']);
+            }
+            else if(this.currentUserRole=="agent")
+            {
+              this.router.navigate(['agent']);
+            }
+            else if(this.currentUserRole=="insured")
+            {
+              this.router.navigate(['insured']);
+            }
+            else{
+              console.log("wrong roleID");
+              this.router.navigate(['']);
+            }
+             
 
         }	
         else{

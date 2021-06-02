@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Policy } from '../models/Policy';
-import { User } from '../models/User';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +15,19 @@ export class PolicyService {
   createPolicy(policy:Policy) {								
     return this.http.post(this.baseUrl, policy);								
   }	
+
+  getpolicy():Observable<Policy[]>{
+    return this.http.get<Policy[]>(this.baseUrl);
+  }
+  getpolicyByAccountNumber(AccountNo:number):Observable<Policy[]>
+  {
+    return this.http.get<Policy[]>(this.baseUrl+'?accountNumber='+AccountNo);
+  }
+
+  // getTemp(AccountNo:number)
+  // {
+  //   return this.http.get<Policy[]>(this.baseUrl+'?accountNumber='+AccountNo);
+  // }
 
 
 }

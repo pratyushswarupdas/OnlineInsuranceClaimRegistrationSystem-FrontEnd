@@ -13,6 +13,17 @@ import { LoginComponent } from './components/user/login/login.component';
 import { CreatepolicyComponent } from './components/policy/createpolicy/createpolicy.component';
 import { PolicyService } from './services/policy.service';
 import { AccountService } from './services/account.service';
+import { HomeComponent } from './components/home/home.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { AgentComponent } from './components/agent/agent.component';
+import { InsuredComponent } from './components/insured/insured.component';
+import { CreateaccountComponent } from './components/account/createaccount/createaccount.component';
+import { ClaimService } from './services/claim.service';
+import { CreateUserService } from './services/create-user.service';
+import { CreateuserComponent } from './components/user/createuser/createuser.component';
+import { ViewpolicyComponent } from './components/policy/viewpolicy/viewpolicy.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,16 +34,27 @@ import { AccountService } from './services/account.service';
     PolicyComponent,
     LoginComponent,
     CreatepolicyComponent,
+    HomeComponent,
+    AdminComponent,
+    AgentComponent,
+    InsuredComponent,
+    CreateaccountComponent,
+    CreateuserComponent,
+    ViewpolicyComponent,
+  
+
+
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    
   ],
-  providers: [UserService,PolicyService,AccountService],
+  providers: [UserService,PolicyService,AccountService,ClaimService,CreateUserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

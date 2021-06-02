@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { account } from 'src/app/models/account';
 import { AccountService } from 'src/app/services/account.service';
 import { PolicyService } from 'src/app/services/policy.service';
 
@@ -13,8 +14,8 @@ export class CreatepolicyComponent implements OnInit {
 
   addPolicyForm:FormGroup;
   submitted:boolean=false;
-  account1:Account[];
-  account2:Account[];
+  account1:account[];
+  account2:account[];
 
   currentuser: string | null;
   invalidLogin: boolean = false;									
