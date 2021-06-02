@@ -11,21 +11,45 @@ import { CreateuserComponent } from './components/user/createuser/createuser.com
 import { LoginComponent } from './components/user/login/login.component';
 
 const routes: Routes = [
-  {path: "", component: HomeComponent},
+                        {path: "", component: HomeComponent},
+                        {path: "home", component: HomeComponent},
+                        {path: 'login', component: LoginComponent},
 
-  {path: "home", component: HomeComponent},
-  { path: 'login', component: LoginComponent },
-  {path: "admin", component: AdminComponent},
-  {path: "agent", component: AgentComponent},
-  {path: "insured", component: InsuredComponent},
-  {path: "createaccount", component: CreateaccountComponent},
-  // {path: "createclaim", component: CreateClaimComponent},
-  // {path: "viewclaim", component: ViewClaimComponent},
-  {path: "createpolicy", component: CreatepolicyComponent},
-  {path: "viewpolicy", component: ViewpolicyComponent},
-  {path: "createuser", component: CreateuserComponent},
+                        {path: "admin", component: AdminComponent,
+                          children:[
+                                    {path: "createuser", component: CreateuserComponent},
+                                    {path: "createaccount", component: CreateaccountComponent},                        
+                                    {path: "createpolicy", component: CreatepolicyComponent},
+                                    {path: "viewpolicy", component: ViewpolicyComponent},
+                                    // {path: "createclaim", component: CreateClaimComponent},
+                                    // {path: "viewclaim", component: ViewClaimComponent},
+                                    ]
+                        },
 
-];
+                        {path: "agent", component: AgentComponent,
+                                    children:[{path: "createaccount", component: CreateaccountComponent},
+                                    // {path: "createclaim", component: CreateClaimComponent},
+                                    // {path: "viewclaim", component: ViewClaimComponent},
+                                    {path: "createpolicy", component: CreatepolicyComponent},
+                                    {path: "viewpolicy", component: ViewpolicyComponent},]
+                        },
+
+                        {path: "insured", component: InsuredComponent,
+                                    children:[{path: "viewpolicy", component: ViewpolicyComponent},
+                                    // {path: "createclaim", component: CreateClaimComponent},
+                                    // {path: "viewclaim", component: ViewClaimComponent},
+                                  ]
+                        },
+
+
+                        // {path: "createaccount", component: CreateaccountComponent},
+                        // // {path: "createclaim", component: CreateClaimComponent},
+                        // // {path: "viewclaim", component: ViewClaimComponent},
+                        // {path: "createpolicy", component: CreatepolicyComponent},
+                        // {path: "viewpolicy", component: ViewpolicyComponent},
+                        // {path: "createuser", component: CreateuserComponent},
+
+                      ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

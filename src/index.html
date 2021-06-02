@@ -60,44 +60,7 @@
         
     </script>
 
-<script type="text/javascript">
-  //Javacript for responsive navigation menu
-  const menuBtn = document.querySelector(".menu-btn");
-  const navigation = document.querySelector(".navigation");
 
-  menuBtn.addEventListener("click", () => {
-    menuBtn.classList.toggle("active");
-    navigation.classList.toggle("active");
-  });
-
-  //Javacript for video slider navigation
-  const btns = document.querySelectorAll(".nav-btn");
-
-
-  var sliderNav = function(manual){
-    btns.forEach((btn) => {
-      btn.classList.remove("active");
-    });
-
-    slides.forEach((slide) => {
-      slide.classList.remove("active");
-    });
-
-    contents.forEach((content) => {
-      content.classList.remove("active");
-    });
-
-    btns[manual].classList.add("active");
-    slides[manual].classList.add("active");
-    contents[manual].classList.add("active");
-  }
-
-  btns.forEach((btn, i) => {
-    btn.addEventListener("click", () => {
-      sliderNav(i);
-    });
-  });
-  </script>
   <!-- bootstrap 5 js -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js" integrity="sha384-5h4UG+6GOuV9qXh6HqOLwZMY4mnLPraeTrjT5v07o347pj6IkfuoASuGBhfDsp3d" crossorigin="anonymous"></script>

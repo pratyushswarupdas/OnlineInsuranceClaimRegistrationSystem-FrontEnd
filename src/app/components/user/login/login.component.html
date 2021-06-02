@@ -1,35 +1,55 @@
-<header class="header" id="header">
-  <!-- <a href="#" class="home">
-    <div class="header_button">Home</div>
-  </a> -->
-  <!--Home Button-->
-  <a href="#" class="brand">
-    <div class="header_logo">
-        <img src="https://www.capgemini.com/in-en/wp-content/themes/capgemini-komposite/assets/images/logo.svg" alt="Capgemini India">
-    </div>Claim Policy Insurance
-  </a>
-
-  
-
-</header>
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-  <div class="login-box form-group">
-    <h1>Login</h1>
-    <div class="textbox">
-      <i class="fas fa-user"></i>
-      <input type="text" placeholder="User Name" class="form-control" formControlName="username" id="username">
-      <div *ngIf="submitted && loginForm.controls.username.errors" class="error">                     
-          <div class="text-danger" *ngIf="loginForm.controls.username.errors.required">Username Is Required</div>                     
-        </div>
-    </div>
-
-    <div class="textbox form-group">
-      <i class="fas fa-lock"></i>
-      <input type="password" placeholder="Password" class="form-control" formControlName="password" id="pwd">
-      <div *ngIf="submitted && loginForm.controls.password.errors" class="error">                     
-          <div class="text-danger" *ngIf="loginForm.controls.password.errors.required">Password Is Required</div>                     
-        </div>
-    </div>
-
-    <button class="btn btn-success">Login</button> &nbsp; &nbsp;
+<body id="body-pd">
+   
+  <div class="l-navbar" id="nav-bar">
+      <nav class="nav">
+          <div> <a routerLink="" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">Menu</span> </a>
+              <div class="nav_list"> 
+                  <br>
+                  <a href="" class="nav_link active"> <i class='bx bx-home-smile'></i> <span class="nav_name">Home</span> </a> 
+                  <a href="" class="nav_link"> <i class='bx bx-info-circle' ></i> <span class="nav_name">About Us</span> </a> 
+                  <a href="" class="nav_link"> <i class='bx bx-brain'></i> <span class="nav_name">Services</span> </a> 
+              </div>
+          </div> 
+          <a href="login" class="nav_link"> 
+            <i class='bx bx-log-in'></i>
+              <span class="nav_name">Login</span> 
+          </a>
+      </nav>
   </div>
+  <!--Container Main start-->
+  <div class="height-100 bg-light">
+      <!-- <h4>Main Components</h4> -->
+
+      
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="login-box form-group">
+          <h1>Login</h1>
+          <div class="textbox">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="User Name" class="form-control" formControlName="username" id="username">
+            <div *ngIf="submitted && loginForm.controls.username.errors" class="error">                     
+                <div class="text-danger" *ngIf="loginForm.controls.username.errors.required">Username Is Required</div>                     
+              </div>
+          </div>
+      
+          <div class="textbox form-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" class="form-control" formControlName="password" id="pwd">
+            <div *ngIf="submitted && loginForm.controls.password.errors" class="error">                     
+                <div class="text-danger" *ngIf="loginForm.controls.password.errors.required">Password Is Required</div>                     
+              </div>
+          </div>
+      
+          <button class="btn btn-success">Login</button> &nbsp; &nbsp;
+        </div>
+      </form>
+      
+
+  </div>
+  <!--Container Main end-->
+
+      
+
+     
+  
+</body>
