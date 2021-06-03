@@ -10,7 +10,7 @@
       <th>Policy Number</th>													
       <th>Policy Premium </th>													
       <th>Account Number</th>			
-      <!-- <th>Claim Creation</th>																							 -->
+      <th>Claim Creation</th>																							
     </tr>													
     </thead>													
     <tbody>		
@@ -19,7 +19,8 @@
       <td></td>
       <td>{{p.id}}</td>													
       <td>{{p.policyPremium  }}</td>													
-      <td>{{p.accountNumber }}</td>			
+      <td>{{p.accountNumber }}</td>		
+      <td><a [routerLink]="['/admin/createclaim',p.id]" class="btn btn-info">click </a> </td>	
       <!-- <td><button onclick="myFunction(p.id)" class="btn btn-info" id="claim-click">Create Claim</button></td>	 -->
      
       		

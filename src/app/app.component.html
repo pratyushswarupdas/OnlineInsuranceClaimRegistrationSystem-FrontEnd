@@ -10,22 +10,7 @@
         <!--UserName-->
         <div class="header_name">
             <div id="UserName"></div>
-            <script>
-            // Check browser support
-            if (typeof(Storage) !== "undefined") {
-                if(localStorage.getItem("username")!==null)
-                {
-                    // Retrieve
-                    document.getElementById("UserName").innerHTML = localStorage.getItem("username");
-                }
-                else{
-                    document.getElementById("UserName").innerHTML = "";
-                }
-            } 
-            else {
-                console.log("UserName Cant Be Displayed On Header");
-            }
-            </script>
+             &nbsp;&nbsp;&nbsp;&nbsp;
 
             <!--Menu Button-->
     <div class="header_toggle"> 
@@ -35,14 +20,16 @@
     </header>
     <!--Header Close-->
 
-
     <!--Main Content Area Open-->
-    <router-outlet></router-outlet>
+    <div class="main_content">
+        <router-outlet></router-outlet>
+    </div>
+
     <!--Main Content Area Close-->
 
     <!--Footer Open-->
-    <footer><span class="text-danger"><strong>This site is copyright &copy; to Capgemini.                           
-        All rights are reserved here ..!</strong></span>
+    <footer><strong>This site is copyright &copy; to Capgemini.                           
+        All rights are reserved here ..!</strong>
     </footer>
     <!--Footer Close-->
 

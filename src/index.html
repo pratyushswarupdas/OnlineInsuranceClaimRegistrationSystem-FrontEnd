@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>PolicyClaim-B1G2UI</title>
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
     <!-- CSS only -->
-    <!-- <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css'>   -->\
+    <!-- <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css'>   -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
           <link rel="stylesheet" href="style.css">
     <!-- JavaScript Bundle with Popper -->
@@ -70,6 +70,23 @@
           
            }
           </script>	 -->
+
+          <script>
+            // Check browser support
+            if (typeof(Storage) !== "undefined") {
+                if(localStorage.getItem("username")!==null)
+                {
+                    // Retrieve
+                    document.getElementById("UserName").innerHTML ="asc"; //localStorage.getItem("username");
+                }
+                else{
+                    document.getElementById("UserName").innerHTML = "efv";
+                }
+            } 
+            else {
+                console.log("UserName Cant Be Displayed On Header");
+            }
+            </script>
 </head>
 <body id="body-pd">
     <app-root></app-root>

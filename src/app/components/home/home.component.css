@@ -111,17 +111,31 @@ section{
   padding: 100px 200px;
 }
 
-/* Main-Container */
 .home{
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   justify-content: center;
   flex-direction: column;
   background: #12ABDB;
 }
 
+.aboutUs, .services{
+  position: relative;
+  width: 100%;
+  /* min-height: 100vh; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #12ABDB;
+  color:white;
+  border-radius:100%; 
+}
+
+.services h1{
+  text-align: center;
+}
 
 
 .home .content{
@@ -182,16 +196,6 @@ section{
 
 .body-pd {
     padding-left: calc(var(--nav-width) + 188px)
-}
-
-body {
-  margin: calc(var(--header-height) + 1rem) 0 0 0;
-  padding-left: calc(var(--nav-width) + 2rem)
-}
-
-.header {
-  height: calc(var(--header-height) + 1rem);
-  padding: 0 2rem 0 calc(var(--nav-width) + 2rem)
 }
 
 }
