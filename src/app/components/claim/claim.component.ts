@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Policy } from 'src/app/models/Policy';
+import { AccountService } from 'src/app/services/account.service';
+import { ClaimService } from 'src/app/services/claim.service';
+import { PolicyService } from 'src/app/services/policy.service';
 
 @Component({
   selector: 'app-claim',
@@ -8,44 +12,9 @@ import { FormGroup } from '@angular/forms';
 })
 export class ClaimComponent implements OnInit {
 
-
-  constructor() { }
+  constructor(private formBuilder: FormBuilder,private claimService:ClaimService,private policyService:PolicyService,private accountService:AccountService) { }
 
   ngOnInit(): void {
-    
-  }
-  currentUser:string| null;
-  currentUserRole:string|null;
-  claimAmount:number|null;
-  claimForm: FormGroup;
-  submitted: Boolean = false;
- onSubmit(){
-   this.submitted=true;
-   this.currentUser=localStorage.getItem('username');
-   this.currentUserRole=localStorage.getItem('userID')
 
-   switch(this.currentUserRole)
-   { 
-      case "insured":
-        {  
-
-          break;
-        }
-
-        case "agent":
-        {   
-
-          break;
-        }
-
-        case "admin":
-        {  
-          
-          break;
-        }
-
-
-   }
- }
-
+}
 }

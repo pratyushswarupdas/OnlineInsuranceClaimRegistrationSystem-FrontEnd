@@ -5,6 +5,7 @@ import { CreateaccountComponent } from './components/account/createaccount/creat
 import { AdminComponent } from './components/admin/admin.component';
 import { AgentComponent } from './components/agent/agent.component';
 import { CreateClaimComponent } from './components/claim/create-claim/create-claim.component';
+import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { HomeComponent } from './components/home/home.component';
 import { InsuredComponent } from './components/insured/insured.component';
 import { CreatepolicyComponent } from './components/policy/createpolicy/createpolicy.component';
@@ -53,6 +54,7 @@ const routes: Routes = [
                         // {path: "createpolicy", component: CreatepolicyComponent},
                         // {path: "viewpolicy", component: ViewpolicyComponent},
                         // {path: "createuser", component: CreateuserComponent},
+                        {path: "**", component: ErrorPageComponent},
 
                       ];
 

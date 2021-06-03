@@ -1,49 +1,49 @@
-
-<br/><br/>														
-<div class="col-md-6 col-md-offset-2 containers">														
-  <h2>Add User</h2>														
-  <br/>														
-  <form [formGroup]="addPolicyForm" (ngSubmit)="onSubmit()">														
-												
-    <div class="form-group">														
-      <label for="policyPremium">Policy Premium:</label>														
-      <input type="policyPremium" formControlName="policyPremium" placeholder="policyPremium" name="policyPremium" class="form-control" id="policyPremium">														
-      <div *ngIf="submitted &&addPolicyForm.controls.policyPremium.errors" class="error">														
-          <div class="text-danger" *ngIf="addPolicyForm.controls.policyPremium.errors.required">Policy Premium is required</div>														
-        </div>														
-    </div>		
-
-    <div class="form-group">														
-      <label for="accountNumber">Account Number:</label>														
-      <input type="accountNumber" formControlName="accountNumber" placeholder="accountNumber" name="accountNumber" class="form-control" id="accountNumber">														
-      <div *ngIf="submitted &&addPolicyForm.controls.accountNumber.errors" class="error">														
-          <div class="text-danger" *ngIf="addPolicyForm.controls.accountNumber.errors.required">Account Number is required</div>														
-       </div>														
-    </div>
-
-<!-- <div class="form-group">
-  <label for="carType">Choose a car type:</label>
-  <select id="cars" name="cars">
-    <option value="SUV">SUV</option>
-    <option value="LUV">LUV</option>
-    <option value="Two Wheeler">Two Wheeler</option>
-  </select>
-  <input type="hidden" formControlName="carType" placeholder="carType" name="carType" class="form-control" id="carType">
-</div> -->
-
-
-    <button class="btn btn-success">Submit</button>&nbsp; &nbsp;														
-    <button class="btn btn-danger" type="reset">Cancel</button>														
-													
-    <br/><br/>											
-      <div *ngIf="invalidLogin" class="error">											
-        <div class="text-danger">Invalid Account Number</div>											
-      </div>														
-														
-    <br/><br/>														
-
-
-</form>														
-
-
-</div>		
+<body class="policy-creation-form">													
+  <div class="container">														
+    <h2>CREATE NEW POLICY</h2>														
+    <br/>														
+    <form [formGroup]="addPolicyForm" (ngSubmit)="onSubmit()">														
+                          
+      <div class="form-group">														
+        <label for="policyPremium">Policy Premium : </label>														
+        <input type="policyPremium" formControlName="policyPremium" placeholder="Enter Policy Premium" name="policyPremium" class="form-control item" id="policyPremium">														
+        <div *ngIf="submitted &&addPolicyForm.controls.policyPremium.errors" class="error">														
+            <div class="text-danger" *ngIf="addPolicyForm.controls.policyPremium.errors.required">Policy Premium is required</div>														
+          </div>														
+      </div>		
+  
+      <div class="form-group">														
+        <label for="accountNumber">Account Number : </label>														
+        <input type="accountNumber" formControlName="accountNumber" placeholder="Enter Account Number" name="accountNumber" class="form-control item" id="accountNumber">														
+        <div *ngIf="submitted &&addPolicyForm.controls.accountNumber.errors" class="error">														
+            <div class="text-danger" *ngIf="addPolicyForm.controls.accountNumber.errors.required">Account Number is required</div>														
+         </div>														
+      </div>
+  
+  <!-- <div class="form-group">
+    <label for="carType">Choose a car type:</label>
+    <select id="cars" name="cars">
+      <option value="SUV">SUV</option>
+      <option value="LUV">LUV</option>
+      <option value="Two Wheeler">Two Wheeler</option>
+    </select>
+    <input type="hidden" formControlName="carType" placeholder="carType" name="carType" class="form-control" id="carType">
+  </div> -->
+  
+  
+      <button class="btn btn-success">Submit</button>&nbsp; &nbsp;														
+      <button class="btn btn-danger" type="reset">Cancel</button>														
+                            
+      <br/><br/>											
+        <div *ngIf="invalidLogin" class="error">											
+          <div class="text-danger">Invalid Account Number</div>											
+        </div>														
+                              
+      <br/><br/>														
+  
+  
+  </form>														
+  
+  
+  </div>		
+  </body>	

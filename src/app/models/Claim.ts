@@ -1,11 +1,11 @@
 export class Claim{
-    id:number               //Claim Number
+    id:number ;              //Claim Number
     claimReason:string;
     accidentlocStreet:string;
     accidentCity:string;
     accidentState:string;
     accidentZip:string;
     claimType:string;
-    policyNumber:number;        
+    policyNumber:number;
     claimAmount:number;
 }

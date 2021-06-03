@@ -19,14 +19,13 @@ export class ViewpolicyComponent implements OnInit {
   
   tempPolicy=new Array();
   
-  
-  
-  
-
-  
-
   currentuser: string | null;
   currentUserRole: string | null;
+  onClick()
+  {
+    alert("hey");
+    
+  }
 
 
   ngOnInit(): void {
@@ -38,6 +37,24 @@ export class ViewpolicyComponent implements OnInit {
     {
 
       case "insured":
+        this.accountService.getAccounts().subscribe((data) => {
+              
+          this.accounts = data.filter(word => word.insuredname===localStorage.getItem("username"));
+        console.log(this.accounts);  
+        for (let accList of this.accounts )
+        {
+          this.policyService.getpolicyByAccountNumber(accList.id).subscribe((data)=>
+          {
+            
+            this.policy=data;
+            this.tempPolicy.push(this.policy);
+          })
+          
+        } console.log(this.tempPolicy);
+
+        
+      }) 
+        
         break;
 
       case "agent":
@@ -54,10 +71,7 @@ export class ViewpolicyComponent implements OnInit {
                 
                 this.policy=data;
                 this.tempPolicy.push(this.policy);
-                
-                
-                
-                
+                console.log(this.tempPolicy);
               })
               
             } console.log(this.tempPolicy);

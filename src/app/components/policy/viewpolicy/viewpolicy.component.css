@@ -1,13 +1,30 @@
 table {
-    counter-reset: Serial;
-  }
-  
-  table tr {
-    counter-increment: rowNumber;
-  }
-  
-  table tr td:first-child::before {
-    content: counter(rowNumber);
-    min-width: 1em;
-    margin-right: 0.5em;
-  }
+  counter-reset: Serial;
+}
+
+table tr {
+  counter-increment: rowNumber;
+}
+
+table tr td:first-child::before {
+  content: counter(rowNumber);
+  min-width: 1em;
+  margin-right: 0.5em;
+}
+
+.view-policy
+{	  padding:80px;
+  background: linear-gradient(to right, #b92b27, #1565c0);
+
+}
+
+h2{
+color: white;
+text-align: center;
+}
+
+.col-lg-12 {
+flex: 0 0 auto;
+width: 100%;
+top: -70px;
+}

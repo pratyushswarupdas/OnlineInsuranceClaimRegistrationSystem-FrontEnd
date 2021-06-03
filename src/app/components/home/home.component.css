@@ -9,15 +9,14 @@
 
 footer {
   padding: 10px 10px 0px 10px;
-  position: absolute;
-  height: 2.5rem; 
-  bottom: 0;
+  position: fixed;
+  left: 0px;
+  /* height: 2.5rem;  */
+  bottom: 0px;
   width: 100%;
-  justify-content:flex;
   background-color: var(--white-color);
-  color: rgb(167, 4, 4);
+  color: rgb(7, 4, 167);
   text-align: center;
-
 }
 
 body {
@@ -126,10 +125,17 @@ section{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: #12ABDB;
+  background: #12acdb;
 }
 
+.home#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 
+}
 
 
 .home .content{

@@ -68,11 +68,11 @@ export class CreatepolicyComponent implements OnInit {
           console.log("posting policy");						
           this.policyService.createPolicy(this.addPolicyForm.value)								
           .subscribe( (data) => {								
-            this.router.navigate(['policy']);		
-            console.log("added");
+          this.router.navigateByUrl('/admin/viewpolicy');		
+          console.log("added");
             
           });
-          this.router.navigate(['createpolicy']); 
+        this.router.navigateByUrl('/admin/viewpolicy');		
 
           break;
         }
@@ -95,11 +95,11 @@ export class CreatepolicyComponent implements OnInit {
           console.log("posting policy");						
           this.policyService.createPolicy(this.addPolicyForm.value)								
           .subscribe( data => {								
-            this.router.navigate(['policy']);		
+            this.router.navigateByUrl('/agent/viewpolicy');		
             console.log("added");
             
           });
-          this.router.navigate(['createpolicy']); 
+          // this.router.navigateByUrl(['createpolicy']); 
 
           break;
         }

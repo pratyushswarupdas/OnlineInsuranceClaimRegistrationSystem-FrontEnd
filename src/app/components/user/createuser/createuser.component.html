@@ -1,41 +1,36 @@
-<h2>Add User</h2>
-        <div class="container">
-            
-            <form [formGroup]="addForm" (ngSubmit)="onSubmit()">                                            
-                                                    
-                <div class="form-group">                                            
-                  <label for="id">UserName:</label>                                         
-                  <input formControlName="id" placeholder="UserName" name="id" class="form-control" id="id">                                            
-                  <div *ngIf="submitted && addForm.controls.id.errors" class="error">                                           
-                      <div class="text-danger" *ngIf="addForm.controls.id.errors.required">UserName is required</div>                                           
-                    </div>                                          
-                </div>                                          
-                                                        
-                <div class="form-group">                                            
-                  <label for="password">Password</label>                                        
-                  <input type="password" formControlName="password" placeholder="Password" name="password" class="form-control" id="password">                                          
-                  <div *ngIf="submitted && addForm.controls.password.errors" class="error">                                         
-                      <div class="text-danger" *ngIf="addForm.controls.password.errors.required">LastName is required</div>                                         
-                    </div>                                          
-                </div>                                          
+<div class="container">
+  <h2 style="text-align: center;color:whitesmoke">User Creation</h2><br/>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">                                            
+                                            
+        <div class="form-group">                                            
+          <label for="id">UserName:</label>                                         
+          <input formControlName="id" placeholder="UserName" name="id" class="form-control item" id="id">                                            
+          <div *ngIf="submitted && addForm.controls.id.errors" class="error">                                           
+              <div class="text-danger" *ngIf="addForm.controls.id.errors.required">UserName is required
                 
-                <div class="form-group">
-                    <label for="userrole">UserRole</label>
-                    <select formControlName="userrole" name="userrole" class="form-control" id="userrole">
-                        <option value=""></option>
-                        <option value="admin">Admin</option>
-                        <option value="agent">Agent</option>
-                        <option value="insured">Insured</option>
-                    </select>
-                </div>
-
-                                                            
-                <button class="btn btn-success">Add User</button>&nbsp; &nbsp;                                                                       
-                <br/><br/>                                          
-              </form>   
-
+              </div>                                           
+            </div>                                          
+        </div>                                          
+                                            
+        <div class="form-group">                                            
+          <label for="password">Password</label>                                        
+          <input type="password" formControlName="password" placeholder="Password" name="password" class="form-control item" id="password">                                          
+          <div *ngIf="submitted && addForm.controls.password.errors" class="error">                                         
+              <div class="text-danger" *ngIf="addForm.controls.password.errors.required">LastName is required</div>                                         
+            </div>                                          
+        </div>                                          
+        
+        <div class="form-group">
+            <label for="userrole">UserRole</label>
+            <select formControlName="userrole" name="userrole" class="form-control item" id="userrole">
+                <option value=""></option>
+                <option value="admin">Admin</option>
+                <option value="agent">Agent</option>
+                <option value="insured">Insured</option>
+            </select>
         </div>
-
-    
-
- 
+        <br> 
+        <button class="btn btn-block createuser">create user</button>&nbsp; &nbsp;                                                                       
+        <br/><br/>                                          
+      </form>   
+      </div>

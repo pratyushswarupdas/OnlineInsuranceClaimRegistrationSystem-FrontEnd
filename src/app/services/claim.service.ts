@@ -12,8 +12,6 @@ export class ClaimService {
   
   createClaim(claim:Claim){
     return this.http.post(this.baseUrl,claim);
-    
-
   }
-  
+
 }

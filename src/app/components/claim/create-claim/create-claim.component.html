@@ -1,120 +1,121 @@
+<div class="claim-creation-form" style="margin-top: 90px">
+  <div class="row">
+    <div class="col-lg-4 col-lg-5 col-md-5 offset-sm-3 center">
+      <div class="card">
+        <h3 class="card-header alert alert-success" style="color: maroon;">
 
-<body>
+          CREATE CLAIM
+        </h3>
+        <div class="card-body">
 
-    <div class="container" style="margin-top: 90px">
-      <div class="row">
-        <div class="col-lg-4 col-lg-5 col-md-5 offset-sm-3 center">
-          <div class="card">
-            <h3 class="card-header alert alert-success" style="color: maroon;">
-  
-              CREATE CLAIM
-            </h3>
-            <div class="card-body">
-  
-              <form [formGroup]="claimForm" (ngSubmit)="onSubmit()">
-                <div class="form-group">
-                  <label>Claim Reason</label>
-                  <input formControlName="claimReason" type="text" class="form-control" id="claimReason"
-                    placeholder="Claim Reason" name="claimReason" required="required"> <span id="claimReason"
-                    style="color: red;"></span>
-                </div><br>
-  
-  
-  
-  
-                <div class="form-group">
-                  <label>Accident Street Location</label>
-                  <input formControlName="accidentlocStreet" type="text" class="form-control" id="accidentlocStreet"
-                    placeholder="Accident Location Street" name="accidentlocStreet" required="required"> <span
-                    id="accidentlocStreet" style="color: red;"></span>
-                </div><br>
-                <div class="form-group">
-                  <label>Accident City</label>
-                  <input formControlName="accidentCity" type="text" class="form-control" id="accidentCity"
-                    placeholder="Accident City" name="accidentCity" required="required"> <span id="accidentCity	"
-                    style="color: red;"></span>
-                </div><br>
-                <div class="form-group">
-                  <label>Accident State</label>
-                  <input formControlName="accidentState" type="text" class="form-control" id="accidentState"
-                    placeholder="Accident State" name="accidentState" required="required"> <span id="accidentState"
-                    style="color: red;"></span>
-                </div><br>
-                <div class="form-group">
-                  <label>Accident Zip</label>
-                  <input formControlName="accidentZip" type="text" class="form-control" id="accidentZip" placeholder="Accident Zip"
-                    name="accidentZip" required="required" type="number"> <span id="accidentZip" style="color: red;"></span>
-                </div><br>
-                <div class="form-group">
-                  <!-- Select Claim Types -->
-                  <label for="claimType">Claim Type</label>
-                  <select class="form-control" id="claimType" formControlName="claimType" placeholder="Claim Type"
-                    required>
-                    <option value="" disabled selected>Select your option</option>
-                    <option value=1>Accidental</option>
-                    <option value=2>Theft</option>
-                    <option value=3>Natural Calamity</option>
-                  </select>
-  
-                </div><br>
-                <div class="form-group">
-                  <label>Policy Number</label>
-                  <input formControlName="policyNumber" type="text" class="form-control" id="policyNumber"
-                    placeholder="Policy Number" name="policyNumber" required="required" type="number"> <span
-                    id="policyNumber" style="color: red;"></span>
-                </div><br>
-                <label>1. Question 1</label><br>
-  
-                <input type="radio" formControlName="answer1" name="answer1" value="1">Yes
-                <input type="radio" formControlName="answer1" name="answer1" value="2">No
-  
-                <br><label>1. Question 2</label><br>
-  
-                <input type="radio" formControlName="answer2" name="answer2" value="1">Yes
-                <input type="radio" formControlName="answer2" name="answer2" value="2">No
-  
-                <br>
-                <label>1. Question 3</label><br>
-  
-                <input type="radio" formControlName="answer3" name="answer3" value="1">Yes
-                <input type="radio" formControlName="answer3" name="answer3" value="2">No
-  
-                <br>
-                <label>1. Question 4</label><br>
-  
-                <input type="radio" formControlName="answer4" name="answer4" value="1">Yes
-                <input type="radio" formControlName="answer4" name="answer4" value="2">No
-  
-                <br>
-                <label>1. Question 5</label><br>
-  
-                <input type="radio" formControlName="answer5" name="answer5" value="1">Yes
-                <input type="radio" formControlName="answer5" name="answer5" value="2">No
-  
-                <br>
-  
-  
-  
-  
-  
-                <div class="container">
-                  <div class="center">
-                    <input type="submit" value="Submit" class="btn btn-success">
-                  </div>
-                </div>
-                <!-- <button (click)="onClick()">Click me</button> -->
-  
-  
-              </form>
-              <h4 style="color: green;"></h4>
-              <h4 style="color: red;"></h4>
+          <form [formGroup]="claimForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label>Claim Reason</label>
+              <input formControlName="claimReason" type="text" class="form-control" id="claimReason"
+                placeholder="Claim Reason" name="claimReason" required="required"> <span id="claimReason"
+                style="color: red;"></span>
+            </div><br>
+
+            <div class="form-group">
+              <label>Accident Street Location</label>
+              <input formControlName="accidentlocStreet" type="text" class="form-control" id="accidentlocStreet"
+                placeholder="Accident Location Street" name="accidentlocStreet" required="required"> <span
+                id="accidentlocStreet" style="color: red;"></span>
+            </div><br>
+            <div class="form-group">
+              <label>Accident City</label>
+              <input formControlName="accidentCity" type="text" class="form-control" id="accidentCity"
+                placeholder="Accident City" name="accidentCity" required="required"> <span id="accidentCity	"
+                style="color: red;"></span>
+            </div><br>
+            <div class="form-group">
+              <label>Accident State</label>
+              <input formControlName="accidentState" type="text" class="form-control" id="accidentState"
+                placeholder="Accident State" name="accidentState" required="required"> <span id="accidentState"
+                style="color: red;"></span>
+            </div><br>
+            <div class="form-group">
+              <label>Accident Zip</label>
+              <input formControlName="accidentZip" type="text" class="form-control" id="accidentZip" placeholder="Accident Zip"
+                name="accidentZip" required="required" type="number"> <span id="accidentZip" style="color: red;"></span>
+               
+
+
+            </div><br>
+
+            <div class="form-group">
+              <!-- Select Claim Types -->
+              <label for="claimType">Claim Type</label>
+              <select class="form-control" id="claimType" formControlName="claimType" placeholder="Claim Type"
+                required>
+                <option value="" disabled selected>Select your option</option>
+                <option value=1>Accidental</option>
+                <option value=2>Theft</option>
+                <option value=3>Natural Calamity</option>
+              </select>
+
+            </div><br>
+            <div class="form-group">
+              <label>Policy Number</label>
+              <input formControlName="policyNumber" type="text" class="form-control" id="policyNumber"
+                placeholder="Policy Number" name="policyNumber" required="required" type="number"> <span
+                id="policyNumber" style="color: red;"></span>
+            </div><br>
+            <label>1. Is your vehicle's engine in working condition? </label><br>
+
+            <input type="radio" formControlName="answer1" name="answer1" value="1" id="answer1">Yes &nbsp;&nbsp;
+            <input type="radio" formControlName="answer1" name="answer1" value="2" id="answer1">No
+
+            <br><label>2. Is your vehicle damaged from the front? </label><br>
+
+            <input type="radio" formControlName="answer2" name="answer2" value="1">Yes &nbsp;&nbsp;
+            <input type="radio" formControlName="answer2" name="answer2" value="2">No
+
+            <br>
+            <label>3. Is your vehicle damaged from back? </label><br>
+
+            <input type="radio" formControlName="answer3" name="answer3" value="1">Yes &nbsp;&nbsp;
+            <input type="radio" formControlName="answer3" name="answer3" value="2">No
+
+            <br>
+            <label>4. Is your vehicle damaged from sideways? </label><br>
+
+            <input type="radio" formControlName="answer4" name="answer4" value="1">Yes &nbsp;&nbsp;
+            <input type="radio" formControlName="answer4" name="answer4" value="2">No
+
+            <br>
+            <label>5. Does your vehicle's show signs of Fire damage? </label><br>
+
+            <input type="radio" formControlName="answer5" name="answer5" value="1">Yes &nbsp;&nbsp;
+            <input type="radio" formControlName="answer5" name="answer5" value="2">No
+
+            <br>
+            <br>
+<div class="form-group">
+<!-- <label>Accident Zip</label> -->
+<input formControlName="claimAmount" type="hidden" class="form-control" id="claimAmount" placeholder="claimAmount"
+  name="claimAmount" value="1"> 
+ 
+            
+            <div class="container"> 
+              <div class="right">
+                <input type="submit" value="Submit" class="btn btn-success">
+              </div>
             </div>
-            <div></div>
-          </div>
+            <!-- <button (click)="onClick()">Click me</button> -->
+
+
+            
+            </div><br>
+            <!-- <button type="button" onclick="calClaim()" > button</button> -->
+          </form>
+          
+          <h4 style="color: green;"></h4>
+          <h4 style="color: red;"></h4>
         </div>
+        <div></div>
       </div>
     </div>
-  
-  
-  </body>
-  
+  </div>
+</div>
+

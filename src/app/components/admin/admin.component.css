@@ -12,14 +12,17 @@ body {
 }
 
 footer {
+    padding: 10px 10px 0px 10px;
     position: fixed;
-    left: 0;
-    bottom: 0;
+    left: 0px;
+    /* height: 2.5rem;  */
+    bottom: 0px;
     width: 100%;
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: var(--white-color);
+    color: rgb(7, 4, 167);
     text-align: center;
- }
+  }
+
 a {
     text-decoration: none
 }
