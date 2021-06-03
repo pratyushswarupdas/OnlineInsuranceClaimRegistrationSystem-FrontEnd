@@ -5,6 +5,7 @@ import { CreateaccountComponent } from './components/account/createaccount/creat
 import { AdminComponent } from './components/admin/admin.component';
 import { AgentComponent } from './components/agent/agent.component';
 import { CreateClaimComponent } from './components/claim/create-claim/create-claim.component';
+import { ViewClaimComponent } from './components/claim/view-claim/view-claim.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { HomeComponent } from './components/home/home.component';
 import { InsuredComponent } from './components/insured/insured.component';
@@ -28,14 +29,14 @@ const routes: Routes = [
                                     {path: "createpolicy", component: CreatepolicyComponent},
                                     {path: "viewpolicy", component: ViewpolicyComponent},
                                     {path: "createclaim", component: CreateClaimComponent},
-                                    // {path: "viewclaim", component: ViewClaimComponent},
+                                    {path: "viewclaim", component: ViewClaimComponent},
                                     ]
                         },
 
                         {path: "agent", component: AgentComponent,
                                     children:[{path: "createaccount", component: CreateaccountComponent},
                                     {path: "createclaim", component: CreateClaimComponent},
-                                    // {path: "viewclaim", component: ViewClaimComponent},
+                                    {path: "viewclaim", component: ViewClaimComponent},
                                     {path: "createpolicy", component: CreatepolicyComponent},
                                     {path: "viewpolicy", component: ViewpolicyComponent},]
                         },
@@ -43,7 +44,7 @@ const routes: Routes = [
                         {path: "insured", component: InsuredComponent,
                                     children:[{path: "viewpolicy", component: ViewpolicyComponent},
                                     {path: "createclaim", component: CreateClaimComponent},
-                                    // {path: "viewclaim", component: ViewClaimComponent},
+                                    {path: "viewclaim", component: ViewClaimComponent},
                                   ]
                         },
 

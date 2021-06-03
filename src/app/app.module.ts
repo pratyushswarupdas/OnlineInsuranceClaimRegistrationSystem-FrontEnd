@@ -3,10 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
-import { AccountComponent } from './components/account/account.component';
-import { ClaimComponent } from './components/claim/claim.component';
-import { PolicyComponent } from './components/policy/policy.component';
 import { UserService } from './services/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/user/login/login.component';
@@ -26,16 +22,14 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
 import { CreateClaimComponent } from './components/claim/create-claim/create-claim.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ServicesPageComponent } from './components/services-page/services-page.component';
+import { ViewClaimComponent } from './components/claim/view-claim/view-claim.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-    AccountComponent,
-    ClaimComponent,
-    PolicyComponent,
+
     LoginComponent,
     CreatepolicyComponent,
     HomeComponent,
@@ -49,6 +43,7 @@ import { ServicesPageComponent } from './components/services-page/services-page.
     CreateClaimComponent,
     AboutUsComponent,
     ServicesPageComponent,
+    ViewClaimComponent,
     
   
 

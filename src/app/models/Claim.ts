@@ -6,6 +6,6 @@ export class Claim{
     accidentState:string;
     accidentZip:string;
     claimType:string;
-    policyNumber:number;
+    policyNumber:number;        
     claimAmount:number;
 }

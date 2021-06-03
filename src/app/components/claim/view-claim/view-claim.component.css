@@ -1,0 +1,16 @@
+.report-generation
+{	  padding:80px;
+    background: linear-gradient(to right, #b92b27, #1565c0);
+  
+}
+
+.col-lg-12 {
+    flex: 0 0 auto;
+    width: 100%;
+    top: -70px;
+  }
+
+  label{
+      color:white;
+  }
+
