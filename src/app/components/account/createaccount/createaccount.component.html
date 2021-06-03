@@ -1,13 +1,10 @@
 
 <div class="registration-form">											
-
-  <h3 style="text-align: center;color:whitesmoke">Account Creation</h3>											
-  <br/>		
-                    
+         
   <form [formGroup]="accntcreate" (ngSubmit)="onSubmit()">
     <div class="form-group">	
       <div class="form-icon">
-        <span><i class="icon icon-user"></i></span>
+        <span><i class="icon icon-user">Account Creation</i></span>
     </div>
       <label for="id">Account Number :</label>											
       <input type="number" class="form-control item" placeholder="Enter your Account number"  formControlName="id" id="id">											
@@ -41,5 +38,4 @@
       <div class="text-danger">Invalid credentials.</div>	
     </div>											
   </form>	
-
-    </div>	
+ </div>	

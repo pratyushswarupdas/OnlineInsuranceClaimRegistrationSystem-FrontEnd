@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 import { CreateaccountComponent } from './components/account/createaccount/createaccount.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { AgentComponent } from './components/agent/agent.component';
@@ -8,12 +9,15 @@ import { HomeComponent } from './components/home/home.component';
 import { InsuredComponent } from './components/insured/insured.component';
 import { CreatepolicyComponent } from './components/policy/createpolicy/createpolicy.component';
 import { ViewpolicyComponent } from './components/policy/viewpolicy/viewpolicy.component';
+import { ServicesPageComponent } from './components/services-page/services-page.component';
 import { CreateuserComponent } from './components/user/createuser/createuser.component';
 import { LoginComponent } from './components/user/login/login.component';
 
 const routes: Routes = [
                         {path: "", component: HomeComponent},
                         {path: "home", component: HomeComponent},
+                        {path: "aboutus", component: AboutUsComponent},
+                        {path: "service", component: ServicesPageComponent},
                         {path: 'login', component: LoginComponent},
 
                         {path: "admin", component: AdminComponent,

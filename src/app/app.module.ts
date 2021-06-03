@@ -24,6 +24,8 @@ import { CreateuserComponent } from './components/user/createuser/createuser.com
 import { ViewpolicyComponent } from './components/policy/viewpolicy/viewpolicy.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { CreateClaimComponent } from './components/claim/create-claim/create-claim.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ServicesPageComponent } from './components/services-page/services-page.component';
 
 
 
@@ -45,6 +47,9 @@ import { CreateClaimComponent } from './components/claim/create-claim/create-cla
     ViewpolicyComponent,
     ErrorPageComponent,
     CreateClaimComponent,
+    AboutUsComponent,
+    ServicesPageComponent,
+    
   
 
 

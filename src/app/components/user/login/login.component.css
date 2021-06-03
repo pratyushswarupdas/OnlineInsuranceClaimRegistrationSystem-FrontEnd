@@ -1,11 +1,11 @@
 @import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
-body{
+/* body{
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wallpapers.net%2Fspot-light-background-hd-wallpaper%2F3840x2160&psig=AOvVaw2tNTQfCSoRBS8cHq8C5Noa&ust=1622631025043000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOid9-Gh9vACFQAAAAAdAAAAABAD') no-repeat;
   background-size: auto;
-  /* background-color: #000000; */
+   background-color: #000000; 
   position: relative;
   margin: var(--header-height) 0 0 0;
   padding: 0 1rem;
@@ -14,11 +14,25 @@ body{
   transition: .5s;
   
 
+}  */
+
+footer {
+  padding: 10px 10px 0px 10px;
+  position: absolute;
+  height: 2.5rem; 
+  bottom: 0;
+  width: 100%;
+  justify-content:flex;
+  background-color: var(--white-color);
+  color: rgb(167, 4, 4);
+  text-align: center;
 }
 
 a {
   text-decoration: none
 }
+
+
 
 .l-navbar {
   position: fixed;
@@ -124,24 +138,26 @@ header .brand{
     justify-content: center;
 }
 
+
 .login-box{
   padding: 8%;
   border-radius:10%;
   width: 500px;
   position: absolute;
-  top: 50%;
+  /* height: ; */
+  top: 52%;
   left: 50%;
   transform: translate(-50%,-50%);
   color: rgb(0, 0, 0);
-  background-color: #9bcaff;
+  background-color: #8fd5fd;
 }
-.login-box h1{
+/* .login-box h1{
   float: left;
   font-size: 40px;
   border-bottom: 6px solid #12ABDB;
   margin-bottom: 50px;
   padding: 13px 0;
-}
+} */
 .textbox{
   width: 100%;
   overflow: hidden;

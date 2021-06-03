@@ -50,19 +50,19 @@ export class LoginComponent implements OnInit {
             this.currentUserRole=localStorage.getItem('userID');
             if(this.currentUserRole=="admin")
             {
-              this.router.navigate(['admin']);
+              this.router.navigateByUrl('/admin');
             }
             else if(this.currentUserRole=="agent")
             {
-              this.router.navigate(['agent']);
+              this.router.navigateByUrl('/agent');
             }
             else if(this.currentUserRole=="insured")
             {
-              this.router.navigate(['insured']);
+              this.router.navigateByUrl('/insured');
             }
             else{
               console.log("wrong roleID");
-              this.router.navigate(['']);
+              this.router.navigateByUrl('');
             }
              
 

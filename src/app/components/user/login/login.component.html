@@ -1,3 +1,4 @@
+
 <body id="body-pd">
    
   <div class="l-navbar" id="nav-bar">
@@ -5,51 +6,61 @@
           <div> <a routerLink="" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">Menu</span> </a>
               <div class="nav_list"> 
                   <br>
-                  <a routerLink="" class="nav_link "> <i class='bx bx-home-smile'></i> <span class="nav_name">Home</span> </a> 
-                  <a href="/home/#aboutUs" class="nav_link"> <i class='bx bx-info-circle' ></i> <span class="nav_name">About Us</span> </a> 
-                  <a href="/home/#services" class="nav_link"> <i class='bx bx-brain'></i> <span class="nav_name">Services</span> </a> 
+                  <a href="/home" class="nav_link"> <i class='bx bx-home-smile'></i> <span class="nav_name">Home</span> </a> 
+                  <a href="/aboutus" class="nav_link"> <i class='bx bx-info-circle' ></i> <span class="nav_name">About Us</span> </a> 
+                  <a href="/service" class="nav_link"> <i class='bx bx-brain'></i> <span class="nav_name">Services</span> </a> 
               </div>
           </div> 
-          <a href="login" class="nav_link"> 
+          <a href="login" class="nav_link active"> 
             <i class='bx bx-log-in'></i>
               <span class="nav_name">Login</span> 
           </a>
       </nav>
   </div>
   <!--Container Main start-->
-  <div class="height-100 bg-light">
+  <div class="containers">
       <!-- <h4>Main Components</h4> -->
 
       
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <div class="login-box form-group">
-          <h1>Login</h1>
-          <div class="textbox">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="User Name" class="form-control" formControlName="username" id="username">
-            <div *ngIf="submitted && loginForm.controls.username.errors" class="error">                     
-                <div class="text-danger" *ngIf="loginForm.controls.username.errors.required">Username Is Required</div>                     
-              </div>
+      <section class="containers home" id="home">
+  
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="login-box form-group">
+            <h1>Login</h1>
+            <div class="textbox">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="User Name" class="form-control" formControlName="username" id="username">
+              <div *ngIf="submitted && loginForm.controls.username.errors" class="error">                     
+                  <div class="text-danger" *ngIf="loginForm.controls.username.errors.required">Username Is Required</div>                     
+                </div>
+            </div>
+        
+            <div class="textbox form-group">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" class="form-control" formControlName="password" id="pwd">
+              <div *ngIf="submitted && loginForm.controls.password.errors" class="error">                     
+                  <div class="text-danger" *ngIf="loginForm.controls.password.errors.required">Password Is Required</div>                     
+                </div>
+            </div>
+        
+            <button class="btn btn-success">Login</button> &nbsp; &nbsp;
           </div>
-      
-          <div class="textbox form-group">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" class="form-control" formControlName="password" id="pwd">
-            <div *ngIf="submitted && loginForm.controls.password.errors" class="error">                     
-                <div class="text-danger" *ngIf="loginForm.controls.password.errors.required">Password Is Required</div>                     
-              </div>
-          </div>
-      
-          <button class="btn btn-success">Login</button> &nbsp; &nbsp;
-        </div>
-      </form>
+        </form>
+        
+      </section>
+
       
 
   </div>
   <!--Container Main end-->
 
-      
+
 
      
   
 </body>
+
+    <footer><strong>This site is copyright &copy; to Capgemini.                           
+        All rights are reserved here ..!</strong>
+    </footer>
+    

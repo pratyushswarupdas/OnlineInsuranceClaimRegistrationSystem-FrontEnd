@@ -38,17 +38,17 @@
     
 }
 
-footer {
+/* footer {
     padding: 10px 10px 0px 10px;
-    position: bottom;
-    left: 0;
+    position: absolute;
+    height: 2.5rem; 
     bottom: 0;
-    width: 100%;
+    width: 80%;
     background-color: var(--white-color);
     color: rgb(167, 4, 4);
     text-align: center;
-
- }
+  
+  } */
  @media screen and (min-width: 768px) {
     /* body {
         margin: calc(var(--header-height) + 1rem) 0 0 0;
