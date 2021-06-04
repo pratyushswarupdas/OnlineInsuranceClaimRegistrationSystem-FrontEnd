@@ -22,7 +22,9 @@ export class LoginComponent implements OnInit {
        
   onSubmit(){									
     this.submitted = true;									
-    if(this.loginForm.invalid){									
+    if(this.loginForm.invalid){		
+      alert("Invalid Login Credentials!");
+							
       return;									
     }		
     if(this.loginForm.valid)
@@ -61,6 +63,8 @@ export class LoginComponent implements OnInit {
               this.router.navigateByUrl('/insured/viewpolicy');
             }
             else{
+              alert("Invalid Login Credentials!");
+
               console.log("wrong roleID");
               this.router.navigateByUrl('');
             }

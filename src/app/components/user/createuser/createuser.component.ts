@@ -35,6 +35,7 @@ export class CreateuserComponent implements OnInit {
     console.log(this.addForm.value);						
      this.createUserService.createUser(this.addForm.value).subscribe((response) => {
         console.log(this.addForm.value);		
+        alert("User Created!");
         //TODO: Insert router code.									
       });							
   }		

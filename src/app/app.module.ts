@@ -29,7 +29,6 @@ import { ViewClaimComponent } from './components/claim/view-claim/view-claim.com
 @NgModule({
   declarations: [
     AppComponent,
-
     LoginComponent,
     CreatepolicyComponent,
     HomeComponent,
@@ -44,11 +43,6 @@ import { ViewClaimComponent } from './components/claim/view-claim/view-claim.com
     AboutUsComponent,
     ServicesPageComponent,
     ViewClaimComponent,
-    
-  
-
-
-    
   ],
   imports: [
     BrowserModule,

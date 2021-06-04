@@ -26,7 +26,7 @@ export class CreateaccountComponent implements OnInit {
   onSubmit(){		
 this.submitted = true;
    					this.loginuser=localStorage.getItem('username');
-             this.userrole=localStorage.getItem('userID')
+             this.userrole=localStorage.getItem('userID');
              console.log(this.loginuser)				
     if(this.accntcreate.invalid)
     {									
@@ -46,7 +46,9 @@ this.submitted = true;
         this.accountService.createAccount(this.accntcreate.value)
             .subscribe((data)=>{
               this.invalidLogin=false;
-            console.log("account created")
+            console.log("account created");
+            alert("Account Created!");
+
            });
           } else
           {
@@ -66,8 +68,11 @@ this.submitted = true;
       this.accountService.createAccount(this.accntcreate.value)
           .subscribe((data)=>{
             this.invalidLogin=false;
-          console.log("account created")
+          console.log("account created");
+          alert("Account Created!");
+
          });
+
         } else
         {
           this.invalidLogin=true;

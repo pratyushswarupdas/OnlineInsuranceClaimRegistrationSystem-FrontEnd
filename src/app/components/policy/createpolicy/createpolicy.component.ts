@@ -67,12 +67,15 @@ export class CreatepolicyComponent implements OnInit {
         {
           console.log("posting policy");						
           this.policyService.createPolicy(this.addPolicyForm.value)								
-          .subscribe( (data) => {								
+          .subscribe( (data) => {						
+           alert("Policy Created");
           this.router.navigateByUrl('/admin/viewpolicy');		
           console.log("added");
             
           });
-        this.router.navigateByUrl('/admin/viewpolicy');		
+          // alert("Policy Created");
+
+//         this.router.navigateByUrl('/admin/viewpolicy');		
 
           break;
         }
@@ -94,8 +97,9 @@ export class CreatepolicyComponent implements OnInit {
         {
           console.log("posting policy");						
           this.policyService.createPolicy(this.addPolicyForm.value)								
-          .subscribe( data => {								
-            this.router.navigateByUrl('/agent/viewpolicy');		
+          .subscribe( data => {			
+            alert("Policy Created");
+            this.router.navigateByUrl('/agent/viewpolicy');		
             console.log("added");
             
           });
@@ -104,6 +108,7 @@ export class CreatepolicyComponent implements OnInit {
           break;
         }
         else{
+
           console.log("wrong acc number");						
 
           this.invalidLogin=true;

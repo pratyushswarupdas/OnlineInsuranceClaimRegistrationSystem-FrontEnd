@@ -44,6 +44,11 @@
             </div>
         
             <button class="btn btn-success">Login</button> &nbsp; &nbsp;
+            <button class="btn btn-danger" type="reset">Cancel</button>											
+            <br/><br/>											
+            <div *ngIf="invalidLogin" class="error">											
+              <div class="text-danger">Invalid credentials.</div>											
+            </div>	
           </div>
         </form>
         
