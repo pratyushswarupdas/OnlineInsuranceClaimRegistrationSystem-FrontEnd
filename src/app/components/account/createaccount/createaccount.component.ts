@@ -18,6 +18,7 @@ export class CreateaccountComponent implements OnInit {
 	flag=false;  
   users:User[];
   loginuser:string|null;
+  userrole: string | null;
 
 
   constructor(private formBuilder: FormBuilder, private router: Router,private accountService:AccountService,private userService:UserService ) { }	
@@ -25,6 +26,7 @@ export class CreateaccountComponent implements OnInit {
   onSubmit(){		
 this.submitted = true;
    					this.loginuser=localStorage.getItem('username');
+             this.userrole=localStorage.getItem('userID')
              console.log(this.loginuser)				
     if(this.accntcreate.invalid)
     {									
@@ -32,20 +34,33 @@ this.submitted = true;
     }	
     if(this.accntcreate.valid)
     { 
-
-   // console.log("login user "+ this.loginuser);
-    // console.log("login user  accnt "+this.loginForm.controls.username.value);
-
-    if(this.loginuser == this.accntcreate.controls.username.value)
+      if(this.userrole == "admin")
+      {
+  
+        
+        for(let user of this.users)
+        {
+          
+          if(user.id === this.accntcreate.controls.insuredname.value)
+          {
+        this.accountService.createAccount(this.accntcreate.value)
+            .subscribe((data)=>{
+              this.invalidLogin=false;
+            console.log("account created")
+           });
+          } else
+          {
+            this.invalidLogin=true;
+        } 
+   }
+   } 
+    else if(this.userrole == "agent" && this.loginuser == this.accntcreate.controls.username.value)
     {
-     //console.log("Insured name  from form "+this.loginForm.controls.insuredname.value)
 
       
-     // console.log("account created");
       for(let user of this.users)
       {
-        //console.log("user name from user table"+user.id)
-       // console.log(user.userrole);
+        
         if(user.id === this.accntcreate.controls.insuredname.value && user.userrole==="insured")
         {
       this.accountService.createAccount(this.accntcreate.value)
@@ -56,7 +71,6 @@ this.submitted = true;
         } else
         {
           this.invalidLogin=true;
-         //alert("user not exist")
       } 
  }
  }
